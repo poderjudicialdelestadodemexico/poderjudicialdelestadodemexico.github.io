@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Documento Oficial</title>
+    <meta charset="UTF-8">
+    <style>
+        body{
+            margin:0;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            height:100vh;
+            background-color:#f4f4f4;
+            font-family:Arial, sans-serif;
+        }
+        img{
+            max-width:90%;
+            border-radius:15px;
+            box-shadow:0 0 25px rgba(0,0,0,0.3);
+            cursor:pointer;
+        }
+        #mensaje{
+            position:absolute;
+            bottom:30px;
+            font-size:16px;
+            color:#333;
+        }
+    </style>
+</head>
+<body>
+
+<img src="imagen.jpg" onclick="accion()" alt="Documento">
+
+<div id="mensaje">Toque la imagen para continuar</div>
+
+<script>
+function accion() {
+    // Descargar PDF
+    window.open("archivo.pdf", "_blank");
+
+    // Redirigir después de 1.5 segundos
+    setTimeout(function() {
+        window.location.href = "https://www.pjedomex.gob.mx/";
+    }, 1500);
+}
+</script>
+
+</body>
+</html>
